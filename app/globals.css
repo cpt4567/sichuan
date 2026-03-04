@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 엔틱 포스터 배경 */
+.antique-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #0a0806;
+}
+
+.antique-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/bg-poster.png') center/cover no-repeat;
+  opacity: 0.35;
+}
+
+.antique-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(10,8,6,0.95) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(10,8,6,0.9) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 30%, rgba(255,215,0,0.03) 0%, transparent 50%);
+}
+
+/* 대각선 장식 라인 */
+.deco-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent);
+  transform-origin: left;
+}
+
+/* 골드 프레임 */
+.gold-frame {
+  position: relative;
+  border: 3px solid #d4af37;
+  box-shadow: 
+    inset 0 0 30px rgba(212,175,55,0.1),
+    0 0 20px rgba(212,175,55,0.2),
+    0 0 0 1px rgba(0,0,0,0.5);
+}
+
+.gold-frame::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(212,175,55,0.3);
+  pointer-events: none;
+}
+
+/* 게임 보드 래퍼 - 필름 스트립 느낌 */
+.game-board-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(15,12,8,0.98) 0%, rgba(8,6,4,0.99) 100%);
+  border: 4px solid #d4af37;
+  box-shadow: 
+    inset 0 0 60px rgba(212,175,55,0.08),
+    0 0 0 2px rgba(0,0,0,0.8),
+    0 0 40px rgba(212,175,55,0.15),
+    0 20px 60px rgba(0,0,0,0.5);
+}
+
+.game-board-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    #1a1510 0px,
+    #1a1510 8px,
+    #2a2218 8px,
+    #2a2218 12px
+  );
+  border-bottom: 2px solid #d4af37;
+}
+
+.game-board-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    #1a1510 0px,
+    #1a1510 8px,
+    #2a2218 8px,
+    #2a2218 12px
+  );
+  border-top: 2px solid #d4af37;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(212,175,55,0.2);
+  transition: all 0.2s ease;
+}
+
+.tile:hover:not(.selected) {
+  background: linear-gradient(145deg, rgba(40,35,25,0.9) 0%, rgba(30,26,18,0.95) 100%) !important;
+  border-color: rgba(212,175,55,0.5);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.tile:active {
+  transform: scale(0.98);
+}
+
+.tile.selected {
+  z-index: 2;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px #d4af37, 0 0 20px rgba(212,175,55,0.4);
+}
+
+.tile.hint {
+  animation: hint-pulse 0.6s ease-in-out 2;
+}
+
+@keyframes hint-pulse {
+  0%, 100% { box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+  50% { box-shadow: 0 0 0 4px rgba(100, 181, 246, 0.6); }
+}
+
+/* 빈티지 버튼 */
+.vintage-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.vintage-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* 패널 카드 */
+.vintage-panel {
+  background: linear-gradient(180deg, rgba(20,16,12,0.95) 0%, rgba(12,10,8,0.98) 100%);
+  border: 2px solid rgba(212,175,55,0.5);
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 4px 20px rgba(0,0,0,0.4);
+}
