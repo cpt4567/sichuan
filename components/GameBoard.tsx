@@ -65,7 +65,7 @@ export function GameBoard({ mode, tiles, selected, hintPair, path, onTileClick }
           <path
             d={pathD}
             fill="none"
-            stroke="#d4af37"
+            stroke="#dc2626"
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -112,12 +112,12 @@ export function GameBoard({ mode, tiles, selected, hintPair, path, onTileClick }
                 borderRadius: 2,
                 cursor: 'pointer',
                 background: sel
-                  ? 'linear-gradient(135deg, rgba(40,35,25,0.95) 0%, rgba(50,45,35,0.95) 100%)'
+                  ? 'linear-gradient(135deg, rgba(60,20,20,0.95) 0%, rgba(70,25,25,0.95) 100%)'
                   : hint
-                    ? 'linear-gradient(135deg, rgba(25,35,45,0.9) 0%, rgba(20,30,40,0.95) 100%)'
+                    ? 'linear-gradient(135deg, rgba(50,25,25,0.9) 0%, rgba(45,20,20,0.95) 100%)'
                     : 'linear-gradient(145deg, rgba(25,22,18,0.95) 0%, rgba(20,18,15,0.98) 50%, rgba(15,12,10,0.95) 100%)',
                 boxShadow: sel
-                  ? '0 0 0 2px #d4af37, 0 4px 12px rgba(0,0,0,0.5)'
+                  ? '0 0 0 2px #dc2626, 0 4px 12px rgba(0,0,0,0.5)'
                   : '0 2px 6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.03)',
                 transform: sel ? 'scale(1.05)' : 'scale(1)',
                 transition: 'all 0.15s ease',
