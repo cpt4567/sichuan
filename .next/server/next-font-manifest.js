@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/mac/develop/sichuan/app/layout\":[\"static/media/6c25f6e897d845a3-s.p.woff2\",\"static/media/d2c1ffb734f61872-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
