@@ -19,8 +19,7 @@ npm run dev
 
 ## 배경 이미지
 
-- **상단 50%**: `public/bg-xi-jinping.png` — 시진핑 주석님 사진 (바둑판 격자 형식)
-- **하단 50%**: `public/bg-china-flag.png` — 중국 국기 (바둑판 격자 형식)
+- `public/bg-china-flag.png` — 중국 국기 (전체 배경)
 
 ## BGM
 

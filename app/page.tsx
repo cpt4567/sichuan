@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      {/* 배경: 바둑판 격자 형식 (상 시진핑, 하 중국 국기) */}
+      {/* 배경: 중국 국기 100% */}
       <div className="antique-bg">
         <div className="antique-bg-overlay" />
       </div>

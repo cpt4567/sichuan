@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* 배경: 바둑판 격자 형식 (상 50% 시진핑, 하 50% 중국 국기) */
+/* 배경: 중국 국기 100% */
 .antique-bg {
   position: fixed;
   inset: 0;
@@ -25,24 +25,8 @@ body {
 .antique-bg::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background: #8b0000 url('/bg-xi-jinping.png') center top repeat;
-  background-size: 15vw 15vw;
-  opacity: 0.9;
-}
-
-.antique-bg::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background: url('/bg-china-flag.png') center bottom repeat;
-  background-size: 15vw 15vw;
+  inset: 0;
+  background: url('/bg-china-flag.png') center/cover no-repeat;
   opacity: 0.9;
 }
 
